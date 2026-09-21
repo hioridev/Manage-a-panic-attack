@@ -1,11 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage a Panic Attack</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#263b63">
+  <meta name="description" content="A calm, practical guide for moving through a panic attack, one small step at a time.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23263b63'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23c9c8ff' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%238adbe3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <title>Steady — Panic Support</title>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to support tools</a>
 
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Steady home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span>Steady</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#breathe">Breathe</a>
+      <a href="#ground">Ground</a>
+      <a href="#support">Get support</a>
+      <a class="author-link" href="messageFromAuthor.html">A note from me</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="welcome" aria-labelledby="welcome-title">
+      <div class="welcome-copy">
+        <p class="eyebrow">A quiet place for this moment</p>
+        <h1 id="welcome-title">You only need to take the next small step.</h1>
+        <p class="intro">If panic is here, you do not have to solve everything. Let your shoulders drop. Put both feet somewhere supported. Begin with one gentle breath.</p>
+      </div>
+
+      <aside class="daily-note" aria-labelledby="daily-label">
+        <div class="daily-note-topline">
+          <span class="spark" aria-hidden="true">✦</span>
+          <p id="daily-label">Today’s steady thought</p>
+        </div>
+        <blockquote id="daily-message">This feeling is intense, but it is not forever.</blockquote>
+        <p class="date" id="today-date"></p>
+      </aside>
+    </section>
+
+    <section class="breathing-section" id="breathe" aria-labelledby="breathe-title">
+      <div class="section-heading">
+        <p class="step-label">Start here</p>
+        <h2 id="breathe-title">One-minute breathing space</h2>
+        <p>Breathe gently—never force a deep breath. If this rhythm feels uncomfortable, return to your natural breathing.</p>
+      </div>
+
+      <div class="breathing-tool">
+        <div class="breathing-visual" id="breathing-visual" aria-hidden="true">
+          <span class="orbit orbit-one"></span>
+          <span class="orbit orbit-two"></span>
+          <span class="breath-orb"></span>
+        </div>
+
+        <div class="breathing-controls" aria-live="polite">
+          <p class="breath-phase" id="breath-phase">Ready when you are</p>
+          <p class="breath-cue" id="breath-cue">In for 4 · Out for 6</p>
+          <p class="timer" id="breath-timer" aria-label="One minute remaining">1:00</p>
+          <div class="button-row">
+            <button class="primary-button" id="breath-toggle" type="button">Start breathing</button>
+            <button class="quiet-button" id="breath-reset" type="button">Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grounding-section" id="ground" aria-labelledby="ground-title">
+      <div class="grounding-intro">
+        <div>
+          <p class="step-label">Come back to the room</p>
+          <h2 id="ground-title">5–4–3–2–1 grounding</h2>
+        </div>
+        <p>Notice what is around you, without judging it. Tap a dot for each thing you notice. If one sense is difficult, imagine a familiar smell or taste instead.</p>
+      </div>
+
+      <div class="grounding-progress" aria-live="polite">
+        <div>
+          <span id="grounding-count">0 of 15 noticed</span>
+          <button class="text-button" id="grounding-reset" type="button">Start over</button>
+        </div>
+        <div class="progress-track" aria-hidden="true"><span id="grounding-progress-bar"></span></div>
+      </div>
+
+      <div class="sense-list">
+        <article class="sense-row">
+          <div class="sense-number">5</div>
+          <div class="sense-copy">
+            <h3>things you can see</h3>
+            <p>Look for colour, light, shape, or one tiny detail.</p>
+          </div>
+          <div class="sense-checks" aria-label="Five things you can see">
+            <button type="button" aria-label="First thing seen"></button><button type="button" aria-label="Second thing seen"></button><button type="button" aria-label="Third thing seen"></button><button type="button" aria-label="Fourth thing seen"></button><button type="button" aria-label="Fifth thing seen"></button>
+          </div>
+        </article>
+        <article class="sense-row">
+          <div class="sense-number">4</div>
+          <div class="sense-copy">
+            <h3>things you can feel</h3>
+            <p>Your feet on the floor, fabric, temperature, or support beneath you.</p>
+          </div>
+          <div class="sense-checks" aria-label="Four things you can feel">
+            <button type="button" aria-label="First thing felt"></button><button type="button" aria-label="Second thing felt"></button><button type="button" aria-label="Third thing felt"></button><button type="button" aria-label="Fourth thing felt"></button>
+          </div>
+        </article>
+        <article class="sense-row">
+          <div class="sense-number">3</div>
+          <div class="sense-copy">
+            <h3>things you can hear</h3>
+            <p>Listen for near sounds, far sounds, and the quietest sound.</p>
+          </div>
+          <div class="sense-checks" aria-label="Three things you can hear">
+            <button type="button" aria-label="First thing heard"></button><button type="button" aria-label="Second thing heard"></button><button type="button" aria-label="Third thing heard"></button>
+          </div>
+        </article>
+        <article class="sense-row">
+          <div class="sense-number">2</div>
+          <div class="sense-copy">
+            <h3>things you can smell</h3>
+            <p>Notice the air, clothing, a drink—or remember two favourite scents.</p>
+          </div>
+          <div class="sense-checks" aria-label="Two things you can smell">
+            <button type="button" aria-label="First thing smelled"></button><button type="button" aria-label="Second thing smelled"></button>
+          </div>
+        </article>
+        <article class="sense-row">
+          <div class="sense-number">1</div>
+          <div class="sense-copy">
+            <h3>thing you can taste</h3>
+            <p>Notice a current taste, take a sip of water, or imagine a favourite.</p>
+          </div>
+          <div class="sense-checks" aria-label="One thing you can taste">
+            <button type="button" aria-label="Thing tasted"></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="tips-section" id="tips" aria-labelledby="tips-title">
+      <div class="section-heading section-heading-light">
+        <p class="step-label">Small things that may help</p>
+        <h2 id="tips-title">Try what feels kind, skip what does not.</h2>
+        <p>No technique has to work perfectly. Choose one simple action and give it a moment.</p>
+      </div>
+
+      <div class="tips-grid">
+        <article class="tip-card tip-card-featured">
+          <span class="tip-index">01</span>
+          <h3>Stay, if you are safe</h3>
+          <p>Pause where you are instead of fighting the feeling. Remind yourself: “This is a panic response. It will pass.”</p>
+        </article>
+        <article class="tip-card">
+          <span class="tip-index">02</span>
+          <h3>Orient out loud</h3>
+          <p>Say your name, where you are, and today’s date. Describe one ordinary object in detail.</p>
+        </article>
+        <article class="tip-card">
+          <span class="tip-index">03</span>
+          <h3>Reduce the input</h3>
+          <p>Move to a quieter spot, lower your screen brightness, loosen tight clothing, or use headphones.</p>
+        </article>
+        <article class="tip-card">
+          <span class="tip-index">04</span>
+          <h3>Use a cool cue</h3>
+          <p>Hold a cool drink, wash your hands, or place a cool cloth on your face. Notice the temperature change.</p>
+        </article>
+        <article class="tip-card">
+          <span class="tip-index">05</span>
+          <h3>Ask for one clear thing</h3>
+          <p>Try: “I’m having a panic attack. Please sit with me and speak slowly.” You do not need to explain more.</p>
+        </article>
+        <article class="tip-card">
+          <span class="tip-index">06</span>
+          <h3>Be gentle afterward</h3>
+          <p>Rest, drink water, and note what helped. If attacks are recurring or affecting daily life, consider talking with a health professional.</p>
+        </article>
+      </div>
+
+      <article class="sunflower-card">
+        <div class="sunflower-symbol" aria-hidden="true">✺</div>
+        <div>
+          <p class="mini-label">Optional accessibility tool</p>
+          <h3>The Hidden Disabilities Sunflower</h3>
+          <p>A Sunflower lanyard, badge, or card can discreetly signal that you have a non-visible disability and may need extra time, space, patience, or support. Wearing one is always your choice, and recognition varies by place.</p>
+        </div>
+        <a href="https://hdsunflower.com/ca/find-the-sunflower" target="_blank" rel="noopener noreferrer">Find Sunflower-friendly places <span aria-hidden="true">↗</span></a>
+      </article>
+    </section>
+
+    <section class="support-section" id="support" aria-labelledby="support-title">
+      <div class="support-heading">
+        <p class="step-label">Canada-wide and Ontario support</p>
+        <h2 id="support-title">You can reach a real person.</h2>
+        <p>If you are in immediate danger or need urgent medical support, call <strong>9-1-1</strong>. If symptoms feel new, severe, or different from past panic attacks—or you are not sure—seek urgent medical care.</p>
+      </div>
+
+      <div class="urgent-banner">
+        <div>
+          <p class="mini-label">Immediate danger or urgent medical support</p>
+          <h3>Call 9-1-1</h3>
+        </div>
+        <a class="call-button" href="tel:911">Call 911</a>
+      </div>
+
+      <div class="support-grid">
+        <article class="support-card">
+          <p class="availability">24/7 · Across Canada</p>
+          <h3>9-8-8 Suicide Crisis Helpline</h3>
+          <p>Call or text if you are thinking about suicide, are worried about someone, or need crisis support.</p>
+          <div class="support-actions">
+            <a href="tel:988">Call 988</a>
+            <a href="sms:988">Text 988</a>
+          </div>
+        </article>
+        <article class="support-card">
+          <p class="availability">24/7 · Ontario post-secondary students</p>
+          <h3>Good2Talk</h3>
+          <p>Free, confidential counselling and crisis support for students at Ontario post-secondary institutions.</p>
+          <div class="support-actions">
+            <a href="tel:+18669255454">Call 1-866-925-5454</a>
+            <a href="sms:686868?&amp;body=GOOD2TALKON">Text GOOD2TALKON</a>
+          </div>
+        </article>
+        <article class="support-card">
+          <p class="availability">24/7 · Ages 5–29 in Canada</p>
+          <h3>Kids Help Phone</h3>
+          <p>Confidential and anonymous support from professional counsellors and trained responders.</p>
+          <div class="support-actions">
+            <a href="tel:+18006686868">Call 1-800-668-6868</a>
+            <a href="sms:686868?&amp;body=CONNECT">Text CONNECT</a>
+          </div>
+        </article>
+        <article class="support-card">
+          <p class="availability">24/7 · Indigenous people across Canada</p>
+          <h3>Hope for Wellness</h3>
+          <p>Immediate emotional support, crisis intervention, and referrals from experienced counsellors.</p>
+          <div class="support-actions">
+            <a href="tel:+18552423310">Call 1-855-242-3310</a>
+            <a href="https://www.hopeforwellness.ca/" target="_blank" rel="noopener noreferrer">Online chat</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="author-invite" aria-labelledby="author-invite-title">
+      <p class="eyebrow">From someone who understands</p>
+      <h2 id="author-invite-title">Before you go, I left you a note.</h2>
+      <p>This page was made by someone with lived experience of panic. My message is here whenever you want to read it.</p>
+      <a class="primary-button link-button" href="messageFromAuthor.html">Read my note <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span></span><span>Steady</span></a>
+        <p>Practical support for difficult moments. This guide does not replace medical care.</p>
+      </div>
+      <details>
+        <summary>Information sources</summary>
+        <p>Support details checked against <a href="https://www.canada.ca/en/public-health/services/mental-health-services/mental-health-get-help.html" target="_blank" rel="noopener noreferrer">Canada.ca</a>, <a href="https://good2talk.ca/ontario/" target="_blank" rel="noopener noreferrer">Good2Talk Ontario</a>, and <a href="https://hdsunflower.com/ca/find-the-sunflower" target="_blank" rel="noopener noreferrer">Hidden Disabilities Sunflower</a>. Grounding and panic guidance draws on <a href="https://oxfordhealth.nhs.uk/camhs/self-care/sleep/relaxation/ground-yourself/" target="_blank" rel="noopener noreferrer">Oxford Health NHS</a> and the <a href="https://www.nhs.uk/mental-health/conditions/panic-disorder/" target="_blank" rel="noopener noreferrer">NHS panic disorder guide</a>.</p>
+      </details>
+    </div>
+  </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
